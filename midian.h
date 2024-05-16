@@ -107,7 +107,7 @@ double ratio_pow(double x, double n, double d) {
     return result;
 }
 
-int la_mod(int x, int d) {
+int lamod(int x, int d) {
     if (d == 0) {
         // Any number modulo 0 is undefined
         // Handle division by zero error
