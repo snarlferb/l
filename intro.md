@@ -266,10 +266,13 @@ x = x0 + at
 y = y0 + bt
 z = z0 + ct
 ```
+Parametric equations define a group of quantities as functions of one or more independent variables called parameters. Parametric equations are commonly used to express the coordinates of the points that make up a geometric object such as a curve or surface, called a parametric curve and parametric surface.
 
 **Quadratic equation**
 The essence of which is their relationship to parabolas. `ax^2 + bx + c = 0`, or equivalently in the form:
 `a(x−h)2+ka(x−h)2+k`, where `a`, `b`, `c`, `h`, and `k` are constants, and `a≠0` describes relationships between variables where one variable depends on the square (power of 2) of another variable. "Completing the Square" can be imployed to convert into standard form by adding or subtracting terms to both sides of the equation.
+
+Bézier curves are considered parametric curves defined by a set of discrete "control points"; Usually the curve is intended to approximate a real-world shape. Bézier curves can be combined to form a Bézier spline, or generalized to higher dimensions to form Bézier surfaces. A specific type of Bezier curve with only two control points (under certain conditions) can perfectly match a segment of a parabola. In most cases, Bezier curves are used for their flexibility in creating a wide variety of shapes, not just mimicking parabolas. A parabola is a conic section (formed through the intersection of a plane and a right circular cone at a specific angle).
 
 **Equation of a plane (3D)**
 *There exists the formula `ax + by + cz = 0` to find a plane, and i'll go over the implications of this at the end.*
