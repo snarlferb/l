@@ -16,7 +16,7 @@ This is intended to be the "introduction to mathematics", where we'll go over th
 
 - **Fractal Geometry**: *Complex Number, Complex Dynamics*
 
-- [**Symbols by SU..**](glossary.md) *This page i've created is a glossary of all the mathematical symbols in its standard UTF-8 representation as we may find that we want to modify these to better serve our communication/visual purposes*
+- [**Symbols by SU..**](glossary.md) *This page i have created is a glossary of some of those mathematical symbols we'll be using thoughout.
 
 
 **About this document**: Please note, that the `^` symbol can be used to represent *"to the power of"*, or `XOR` in programming, and in the case of the ladder situation, i'll use specifically `⊕` and that way you always know what i mean.
