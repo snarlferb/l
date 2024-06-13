@@ -10,7 +10,7 @@ already have your own method in your head of how it should look and what works b
 
 
 This is something i was illustrating for Transitive Closure. First youd analyze this kind of cycle/flow chart thing...
-![Flobo](images/cycle.jpg)
+![Flobo](images/cycle4.jpg)
 And you create a table to fill in those paths where each number meet in that cycle/flow chart thing.
 ```
        dest ->

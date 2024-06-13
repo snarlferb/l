@@ -2,6 +2,8 @@ This is intended to be the "introduction to mathematics", where we'll go over th
 
 - **Algebraic Math**: *Real Number; Arithmetic; Vector Algebra; Coordinate Systems; Matrices; Normalization; Systems of Equations; Set Theory; Expression; Logarithm; Linear; Polynomial; Quadratic; Piecewise; Parametric; Exponential; Rational; Logarithmic; Inverse; Periodic; and Transfer functions*
 
+- [**Matrix Multiplication**](matrix.md): *I'm experimenting with the best way to illustrate matrix multiplication*
+
 - [**Midian Larune**](midian.md) *Rational Trigonometry, States, Spreads, Quadrances, Reciprocal Properties, Isometric Transformations*
 
 - **Geometry**: *Scalar, Vector, Plane & Solid Geometry; Transformation; Geometric Primitives; Affine & Projection Matrices*
