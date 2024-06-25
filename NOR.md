@@ -36,15 +36,3 @@ simulate NOR behavior: (~) NOT'ing the result of (|) OR
                   | `------|NOT
                   `--------|OR
 
-one more...
-
-    X: -----.
-    Y: ---. |
-         | | `-<o-|OR--.
-         | }---<o-|     |
-         | |     `------|&&--.
-         | `------|&&
-          --------|&&
-
-The final result is the logical NOR of X and Y
-
