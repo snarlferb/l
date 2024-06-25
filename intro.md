@@ -77,7 +77,7 @@ The opposite of `n log(x)` is to raise the base `x` to the power of `1/n`, which
 
 So you can have for e.g. `log2(8)=x`, which means you're finding the exponent to which `2` must be raised to produce `8`. In this case, `x` would equal `3`, i.e. `2^3 = 8`
 
-Modulus is `x mod y`, which you can consider the opposite of division, can be illustrated when `x` is greater than or less than `y` as e.g.
+Modular aerithmetic, which is a mathematical concept where you take the remainder after a division by a certain number (the modulus) can be written as `x mod y`, which you can consider the opposite of division, can be illustrated when `x` is greater than or less than `y` as e.g.
 
 `10 mod(3)`, `3` goes into `10` (3x), `3 * 3 = 9`, and `10 - 9` = The answer: `1`
 
@@ -95,10 +95,36 @@ So odd numbers are integers that are not divisible by 2, while even numbers are 
 
 **Prime numbers** are another such example. Prime numbers are integers greater than 1 that have exactly two distinct positive divisors: 1 and themselves. They are the building blocks of the integers, as every integer greater than 1 can be uniquely expressed as a product of prime numbers, a concept known as the Fundamental Theorem of Arithmetic. Prime numbers are of central importance in number theory and other fields.
 
+And... Not that i want to muk up what is already becoming a challenging assignment for someone new, however its actually possible to illustrate the utility of modulus in conjunction with memory addresses, and why we might invoke them in such situations. Consider that you can have a stack of addresses that may wrap around at some given point in the program. If you had `0x1f00` minus `0x2000` that may seem like it goes into a negative area, however you have to think about it a little differently, and in terms of the maximum address and subtracting from it; or the minimum address and adding to it... Does that make sense?
+
+And if it doesnt thats okay, because it doesnt to me either, as we have no way of knowing for sure what it may mean to minus something, if its the former or the ladder. So to use operations like addition and subtraction in the context of memory addresses is a bit of a blind test, in my opinion. I personally dont know how its meant to be interpreted, so there must be a better way to think about it.
+
+In memory addressing, the modulus is the size of the address space.  For a 16-bit system with addresses from `0x0000` to `0xFFFF`, the modulus would be `0x10000` (65536), which is a boundary condition for wrapping around in the circular memory space. And the track would have 65536 (2^16) positions, labeled from `0x0000` to `0xFFFF`.
+
+Memory addresses are typically represented in hexadecimal (base-16) for conciseness. The modular arithmetic for wrap-around calculations still applies regardless of the base used. To find the offset between two addresses (`A` and `B`), you can use the modulo operation: `offset = (B - A) mod (address_space_size)`, to ensure the offset stays within the valid range `(0  to "address_space_size" -  1)`,   even if the subtraction results in a negative value due to wrap-around.
+
+`B-A` tells you how many positions you need to move clockwise from `A` to reach `B`. It could be a positive value if `B` is "after" `A`, or a negative value if `B` is "before" `A` on the circle (due to wrap-around). The offset just says the distance between `A` and `B` within the circular memory space. It doesn't matter if `B` is a larger address that "wraps around" `A`. The modulo operation handles that. 
+
 
 **Mathematical Equivalents**
 
 When you left shift a binary number by `n` bits, you effectively multiply the number by `2^n`. Take this for example, `5 << 2` is equivalent to `5 * 2^2`. Each left shift moves all the bits in the binary representation of the number to the left by `n` positions, effectively appending `n` zeros to the right. For a binary representation of `5` (which is 101101) it is left shifted two positions, resulting in `1010010100`, which is `20` in decimal. And the same is the case for right shifting, which is equivalent to dividing a number by `2^n`. The choice to replace a regular operation with a bitwise one often leads to faster code, so you can exploit this fact and use it in all kinds of ways for optimizing any operation.
+
+We can demonstrate what happens in computation when you "add" something, using two digits in the result, representing the binary representation of the sum. As we said, each digit in the binary result corresponds to a power of `2^n`: the rightmost digit is 2^0 (1s place), the next digit is 2^1 (2s place), and so on.
+
+`0 + 0 = 00`, the sum is 0, which in binary is simply 0 (0 x 2^0).
+
+`0 + 1 = 01`, the sum is 1, which in binary is 1 (1 x 2^0).
+
+`1 + 0 = 01`, the sum is 1, again represented as 1 (1 x 2^0).
+
+`1 + 1 = 10`, here, the sum is 2. In binary, this is 2 (1 x 2^1) + 0 (0 x 2^0).
+
+Then we can illustrate this w/ the binary addition algorithm, using bitwise logical operations like XOR (^) and AND (&)
+
+` bit 0 of sum: S = a^b  `, and   ` bit 1 of sum: C = a&b `
+
+Note, that modern processors often utilize some form of carry-lookahead logic (and other more advanced adder circuits) for faster addition, especially in the Arithmetic Logic Unit (ALU) responsible for calculations. And for fun i made an illustration of a [**half adder**](NOR.md) circuit in ascii art (i make these ascii circuits all the time)
 
 
 **Factorial** of a non-negative integer `n`, denoted by `n!` is the product of all positive integers less than or equal to `n`. For example  `5! = 5 * 4 * 3 * 2 * 1 = 120`. You might use it to consider purmutations of some string w/ identical items..
