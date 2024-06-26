@@ -36,8 +36,8 @@ Hm.. How would you go about this?.. What about asking,
 *"how many times does some does some Magic number, either a least common or greatest common divisor,
 go into 1049 as well as 432,861... that can atleast chisel them down a bit, no?... As ive never heard of any other trick working"*
 
-2 * 200,000 = 400,000
-2 * 500     = 1000     and thats where i would start with this, using some magic number get closer to finding how they divide together.
+- 2 * 200,000 = 400,000
+- 2 * 500     = 1000 ...    and thats where i would start with this, using some magic number get closer to finding how they divide together.
 
 You're still using multiplication to get to where you want, but thats fine.
 Ive thought about possible other tricks, and they just end up being just as long as it would take you to guess-timate like this.
