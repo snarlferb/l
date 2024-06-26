@@ -4,8 +4,7 @@
 So we are looking at it as if the `2` is on the left, and we are positing...
 
 ... ... *"how many times does (2) go into `528`,       lets see..."*
-
--                                                  top
+:::                                             top
 - `2` goes into `5`, (2x) ...                  _2_ _ _ _
 - Then you multiply the top by the divisor
 -  |_2_ _ _ _|
