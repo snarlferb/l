@@ -18,6 +18,7 @@ So we are looking at it as if the `2` is on the left, and we are positing...
 -  |_2_6_ _ _|
 - `2 * 6` = ...        ...     *(12 left over)*
 - `(12) - 12` = ... `0` ...
+- *(next digit)*
 - now bring down the 8 from 528,   `(08)`
 
 - *"how many times does (2) go into `(08)`"*
