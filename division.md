@@ -30,11 +30,12 @@ So we are looking at it as if the `2` is on the left, and we are positing...
 
 
 
-## Next do   432,861 / 1049
+### Next do...
+## 432,861 / 1049
 
 Hm.. How would you go about this?.. What about asking,
 *"how many times does some does some Magic number, either a least common or greatest common divisor,
-go into 1049 as well as 432,861... that can atleast chisel them down a bit, no?... As ive never heard of any other trick working"*
+go into 1049 as well as 432,861"*... that can atleast chisel them down a bit...
 
 - 2 * 200,000 = 400,000
 - 2 * 500     = 1000 ...    and thats where i would start with this, using some magic number get closer to finding how they divide together.
