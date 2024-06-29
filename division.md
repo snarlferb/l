@@ -43,14 +43,14 @@ go into 1049 as well as 432,861"*... that can atleast chisel them down a bit...
 You're still using multiplication to get to where you want, but thats fine.
 Ive thought about possible other tricks, and they just end up being just as long as it would take you to guess-timate like this.
 
+What's really good about this technique, is that you dont have to keep track of your magical numbers. I should elaborate on what that means.
+You keep track of the magic number you are using to slice them, but you dont keep track of the magical fractions that are the resulting
+quotients from guesstimating; As the magic number is the same for both, so they cancel out. The quotients are just a result to verify
+how close you are. If your magic number is resulting in a magical product that is *greater than*, you go lower, if it results in *less than*...
+... Well you know the rest.
 
-What's really good about this technique, is that you dont hav to keep track of your magic numbers you've been using to guesstimate...
-if they dont work, you simply discard them and keep replacing them over and over until you have a number that is closer to
-dividing into both numbers (in the way you want) - that number btw being your **answer**...
-
-At that point its just about multiplying decimals... For example, if you have TWO COMMON decimal numbers, then thats your *answer*.
-Otherwise you are still in the process of guesstimating and discarding numbers in the process of equivalence... Its up to you how many
-decimal points over you want to go...
+If the magical fractions dont work, you simply discard them and keep replacing them over and over until you have a number that is closer to
+dividing into both numbers (in the way you want) or when multiplying them gives you the target number.
 
 In C, a double floating point variable typically conforms to the IEEE 754 standard for double-precision floating-point format.
 This format uses 64 bits to represent a number, with: 1 bit for the sign, 11 bits for the exponent and 52 bits for the significand (mantissa),
