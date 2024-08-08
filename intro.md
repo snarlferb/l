@@ -393,7 +393,9 @@ To solve for c, we take the square root of both sides:
 
 
 **Homogeneous coordinates**:
-Matrices used for any kind of movement are compatible with homogeneous coordinates. An additional dimension is included to represent translations. A vertex is represented as `x, y, z, w` where `w` is typically set to `1` for points and `0` for vectors. The additional dimension allows for more complex transformations to be represented in a single matrix *(will elaborate further)*
+In homogeneous coordinates, point `x,y,z` is represented by n+1 coordinates. For example, in 3D space, a point `x,y,z` is represented by `x,y,z,w` in homogeneous coordinates, where `w` is a scaling factor.
+
+Matrices used for any kind of movement are compatible with homogeneous coordinates. An additional dimension is included to represent translations. A vertex is represented as `x, y, z, w` where `w` is typically set to `1` for points and `0` for vectors, That is, the value `w = 0` for vectors allows for the separation of points and vectors in the homogeneous coordinate system, and vectors are not affected by translations and only represent direction and magnitude. In contrast, points can be translated, and thus their `w` value is non-zero. The additional dimension allows for more complex transformations to be represented in a single matrix *(will elaborate further... ps. points at infinity are conceptually different from vectors)*
 
 Scaling `x`, `y` and `z` by `w` doesn't change a points location in space, therefore they're called homogeneous coordinates. More generally, values are considered homogenous if they follow the same interval or rule, for example: *"Subdomain A, B and C (subsets of a larger domain) are different intervals of values, and the highest value occurs during C"*, would be a counterexample to, *"Subdomain A, B and C are homogeneous intervals of a degree of `4`"*
 
@@ -404,7 +406,7 @@ To apply transformations represented by a 4x4 matrix to a vertex, you use matrix
 |g  h  i  tz|  | z |  |gx + hy + iz + tz |
 |0  0  0  1 |  | 1 |  |        1         |
 ```
-The resulting coordinates represent the transformed vertex in homogeneous coordinates: `x', y', z', w'` After transformation, to convert back to Cartesian coordinates `x, y, z` you divide the resulting coordinates by the w component: `x'/w', y'/w', z'/w'` This method allows for efficient representation and computation of transformations. Values in the rightmost column represent translation along the x, y, and z axes respectively. Values in the upper-left 3x3 submatrix represent a combination of rotation, scaling, and shearing transformations. This submatrix is often referred to as the rotation and scale portion of the matrix. The bottom row `[0 0 0 1]` is used for the mathematical representation of homogeneous coordinates, which helps simplify operations like translation.
+The resulting coordinates represent the transformed vertex in homogeneous coordinates: `x', y', z', w'`. After transformation, to convert back to Cartesian coordinates `x, y, z` you divide the resulting coordinates by the w component: `x'/w', y'/w', z'/w'` This method allows for efficient representation and computation of transformations. Values in the rightmost column represent translation along the x, y, and z axes respectively. Values in the upper-left 3x3 submatrix represent a combination of rotation, scaling, and shearing transformations. This submatrix is often referred to as the rotation and scale portion of the matrix. The bottom row `[0 0 0 1]` is used for the mathematical representation of homogeneous coordinates, which helps simplify operations like translation.
 
 
 **Determinant**

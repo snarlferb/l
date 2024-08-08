@@ -29,9 +29,14 @@ In order to prepare us for the kinds of transformative relationships you'll want
 
 `2/2 = 1` or `1/1`, where `1/1` is some kind of transformation out of the state... Therefore you want to stay within `1/2 * 2/1 = 1*2 / 2*1` this box (you can construct a box where each ratio is equivalent - and this represents a group, or multiple states (potential states))
 
+Or more simply
+```
+n/d * d/n = (n*d)/(d*n) = 1
+```
+
 Anything that can be called `1` or `2` can be called `1/2`, `2/1` and `1*2`
 
-In that sense you might call it a "closed ratio system", which means this "box" or set is self-contained and it maintains equivalence only within the context its presented in. In order to relate things in a uniform way, it must include a third part (much like the rise/run/hypotenuse) such that it satisifes both this interdependence and potential state relationship. If `x` represents our ratio `n/d/h`, then it says something about its two variables (potential state operands), and particularity of multiple variables, `x > 1`
+In that sense you might call it a "closed ratio system", which means this "box" or set is self-contained and it maintains equivalence only within the context its presented in. In order to relate things in a uniform way, it must include a third part (much like the rise/run/hypotenuse) such that it satisfies both this interdependence and potential state relationship. If `x` represents our ratio `n/d/h`, then it says something about its two variables (potential state operands), and particularity of multiple variables, `x > 1`
 ```
 x  =  1  2   or   2  1
       2  1        1  2
